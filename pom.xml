@@ -48,10 +48,14 @@
       <groupId>io.quarkus</groupId>
       <artifactId>quarkus-resteasy-reactive</artifactId>
     </dependency>
-     <dependency>
+    <dependency>
       <groupId>io.hypersistence</groupId>
       <artifactId>hypersistence-utils-hibernate-62</artifactId>
       <version>3.5.2</version>
+    </dependency>
+    <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-redis-cache</artifactId>
     </dependency>
     <dependency>
       <groupId>io.quarkus</groupId>

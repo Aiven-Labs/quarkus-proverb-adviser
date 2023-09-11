@@ -6,6 +6,8 @@ This repo comes with a CSV containing 100 proverbs and their embeddings. Their i
 
 ## Setup
 
+### Postgres
+
 You will a need a Postgres instance with the `pgvector` extension.
 
 You can get a completely **free** Postgres instance on Aiven, use this special referral [link](https://go.aiven.io/sebi-signup) to get extra credits to try out the other services ("Apache Kafka", "Clickhouse", "Apache Flink" etc ...), no credit cards asked.
@@ -24,9 +26,16 @@ psql 'postgres://avnadmin:password@yourdbhost:port/defaultdb?sslmode=require' -c
 
 ```
 
+### OpenAPI Token
+
 You will also need an OpenAI token, you can get one [here](https://platform.openai.com/).
 
 In the `src/main/resources/application.properties` set the correct values for your db and your OpenAI token ! 
+
+### Redis 
+
+For each input, the application will try to use the Redis cache to retrieve a potential existing embedding. 
+So you need a Redis server, you can get one for free if you have signed-up an Aiven account. You just have to set the redis host in your `application.properties`. 
 
 
 ## Running the application in dev mode
